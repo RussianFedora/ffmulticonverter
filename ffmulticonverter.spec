@@ -62,7 +62,7 @@ chmod 755 %{buildroot}%{py_sitedir}/%{name}/preferences_dlg.py
 
 %changelog
 * Tue Jun 18 2013 Vasiliy N. Glazov <vascom2@gmail.com> 1.5.2-1
-- Initial release
+- Update to 1.5.2
 
 * Fri May 24 2013 Vasiliy N. Glazov <vascom2@gmail.com> 1.5.1-1
 - Initial release
