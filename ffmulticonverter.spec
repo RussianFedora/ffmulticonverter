@@ -47,12 +47,12 @@ chmod 755 %{buildroot}%{py_sitedir}/%{name}/about_dlg.py
 chmod 755 %{buildroot}%{py_sitedir}/%{name}/presets_dlgs.py
 chmod 755 %{buildroot}%{py_sitedir}/%{name}/progress.py
 chmod 755 %{buildroot}%{py_sitedir}/%{name}/preferences_dlg.py
+rm %{buildroot}%{py_sitedir}/%{name}-%version-py3.3.egg-info
 
 
 %files
 %doc ChangeLog COPYING README.txt AUTHORS TRANSLATORS
 %{_bindir}/%{name}
-%{py_sitedir}/%{name}-%version-py3.3.egg-info
 %{py_sitedir}/%{name}
 %{_datadir}/applications/*.desktop
 %{_datadir}/%{name}/presets.xml
