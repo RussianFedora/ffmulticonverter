@@ -2,7 +2,7 @@
 
 Name:       ffmulticonverter
 Version:    1.6.0
-Release:    1%{?dist}
+Release:    2%{?dist}
 Summary:    GUI File Format Converter
 
 License:    GPLv3
@@ -60,6 +60,9 @@ chmod 755 %{buildroot}%{py_sitedir}/%{name}/preferences_dlg.py
 %{_mandir}/man1/ffmulticonverter.1.gz
 
 %changelog
+* Wed Oct 08 2014 Vasiliy N. Glazov <vascom2@gmail.com> 1.6.0-2
+- Bump rebuild for Fedora 21
+
 * Mon Jan 13 2014 Vasiliy N. Glazov <vascom2@gmail.com> 1.6.0-1
 - Update to 1.6.0
 
