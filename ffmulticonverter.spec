@@ -52,6 +52,7 @@ chmod 755 %{buildroot}%{py_sitedir}/%{name}/preferences_dlg.py
 %files
 %doc ChangeLog COPYING README.txt AUTHORS TRANSLATORS
 %{_bindir}/%{name}
+%{py_sitedir}/%{name}-%version-py3.4.egg-info
 %{py_sitedir}/%{name}
 %{_datadir}/applications/*.desktop
 %{_datadir}/%{name}/presets.xml
