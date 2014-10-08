@@ -47,7 +47,6 @@ chmod 755 %{buildroot}%{py_sitedir}/%{name}/about_dlg.py
 chmod 755 %{buildroot}%{py_sitedir}/%{name}/presets_dlgs.py
 chmod 755 %{buildroot}%{py_sitedir}/%{name}/progress.py
 chmod 755 %{buildroot}%{py_sitedir}/%{name}/preferences_dlg.py
-rm %{buildroot}%{py_sitedir}/%{name}-%version-py3.3.egg-info
 
 
 %files
