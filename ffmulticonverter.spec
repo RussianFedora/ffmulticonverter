@@ -1,8 +1,8 @@
 %define py_sitedir /usr/lib/python?.?/site-packages
 
 Name:       ffmulticonverter
-Version:    1.6.0
-Release:    2%{?dist}
+Version:    1.7.0
+Release:    1%{?dist}
 Summary:    GUI File Format Converter
 
 License:    GPLv3
@@ -50,7 +50,8 @@ chmod 755 %{buildroot}%{py_sitedir}/%{name}/preferences_dlg.py
 
 
 %files
-%doc ChangeLog COPYING README.txt AUTHORS TRANSLATORS
+%doc ChangeLog README.txt AUTHORS TRANSLATORS
+%license COPYING
 %{_bindir}/%{name}
 %{py_sitedir}/%{name}-%version-py3.4.egg-info
 %{py_sitedir}/%{name}
@@ -60,6 +61,9 @@ chmod 755 %{buildroot}%{py_sitedir}/%{name}/preferences_dlg.py
 %{_mandir}/man1/ffmulticonverter.1.gz
 
 %changelog
+* Wed Mar 25 2015 Vasiliy N. Glazov <vascom2@gmail.com> 1.7.0-1
+- Update to 1.7.0
+
 * Wed Oct 08 2014 Vasiliy N. Glazov <vascom2@gmail.com> 1.6.0-2
 - Bump rebuild for Fedora 21
 
