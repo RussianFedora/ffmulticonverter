@@ -1,5 +1,3 @@
-%define py_sitedir /usr/lib/python?.?/site-packages
-
 Name:       ffmulticonverter
 Version:    1.7.1
 Release:    1%{?dist}
@@ -42,19 +40,19 @@ Features:
 
 %install
 %{__python3} ./setup.py install -O1 --root=%{buildroot}
-chmod 755 %{buildroot}%{py_sitedir}/%{name}/%{name}.py
-chmod 755 %{buildroot}%{py_sitedir}/%{name}/about_dlg.py
-chmod 755 %{buildroot}%{py_sitedir}/%{name}/presets_dlgs.py
-chmod 755 %{buildroot}%{py_sitedir}/%{name}/progress.py
-chmod 755 %{buildroot}%{py_sitedir}/%{name}/preferences_dlg.py
+chmod 755 %{buildroot}%{python3_sitelib}/%{name}/%{name}.py
+chmod 755 %{buildroot}%{python3_sitelib}/%{name}/about_dlg.py
+chmod 755 %{buildroot}%{python3_sitelib}/%{name}/presets_dlgs.py
+chmod 755 %{buildroot}%{python3_sitelib}/%{name}/progress.py
+chmod 755 %{buildroot}%{python3_sitelib}/%{name}/preferences_dlg.py
 
 
 %files
 %doc ChangeLog README.txt AUTHORS TRANSLATORS
 %license COPYING
 %{_bindir}/%{name}
-%{py_sitedir}/%{name}-%version-py3.4.egg-info
-%{py_sitedir}/%{name}
+%{python3_sitelib}/%{name}-%version-py3.4.egg-info
+%{python3_sitelib}/%{name}
 %{_datadir}/applications/*.desktop
 %{_datadir}/%{name}/presets.xml
 %{_datadir}/pixmaps/%{name}.png
@@ -63,6 +61,7 @@ chmod 755 %{buildroot}%{py_sitedir}/%{name}/preferences_dlg.py
 %changelog
 * Tue Jun 30 2015 Vasiliy N. Glazov <vascom2@gmail.com> 1.7.1-1
 - Update to 1.7.1
+- Use macros for python lib path
 
 * Wed Mar 25 2015 Vasiliy N. Glazov <vascom2@gmail.com> 1.7.0-1
 - Update to 1.7.0
