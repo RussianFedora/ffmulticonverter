@@ -1,5 +1,5 @@
 Name:       ffmulticonverter
-Version:    1.7.1
+Version:    1.7.2
 Release:    1%{?dist}
 Summary:    GUI File Format Converter
 
@@ -59,6 +59,9 @@ chmod 755 %{buildroot}%{python3_sitelib}/%{name}/preferences_dlg.py
 %{_mandir}/man1/ffmulticonverter.1.gz
 
 %changelog
+* Fri Dec 18 2015 Vasiliy N. Glazov <vascom2@gmail.com> 1.7.2-1
+- Update to 1.7.2
+
 * Tue Jun 30 2015 Vasiliy N. Glazov <vascom2@gmail.com> 1.7.1-1
 - Update to 1.7.1
 - Use macros for python lib path
