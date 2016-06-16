@@ -1,6 +1,6 @@
 Name:       ffmulticonverter
 Version:    1.7.2
-Release:    1%{?dist}
+Release:    2%{?dist}
 Summary:    GUI File Format Converter
 
 License:    GPLv3
@@ -9,7 +9,7 @@ Source0:    http://sourceforge.net/projects/ffmulticonv/files/%{name}-%{version}
 
 BuildArch:  noarch
 
-BuildRequires:  python3-devel
+BuildRequires:  pkgconfig(python3)
 BuildRequires:  python3-setuptools
 
 Requires:   python3-PyQt4
@@ -51,14 +51,18 @@ chmod 755 %{buildroot}%{python3_sitelib}/%{name}/preferences_dlg.py
 %doc ChangeLog README.txt AUTHORS TRANSLATORS
 %license COPYING
 %{_bindir}/%{name}
-%{python3_sitelib}/%{name}-%version-py3.4.egg-info
+%{python3_sitelib}/%{name}-%version-py%{python3_version}.egg-info
 %{python3_sitelib}/%{name}
 %{_datadir}/applications/*.desktop
 %{_datadir}/%{name}/presets.xml
 %{_datadir}/pixmaps/%{name}.png
-%{_mandir}/man1/ffmulticonverter.1.gz
+%{_mandir}/man1/%{name}.1.gz
 
 %changelog
+* Thu Jun 16 2016 Vasiliy N. Glazov <vascom2@gmail.com> 1.7.2-2
+- Correct files handling
+- Use pkgconfig in BR
+
 * Fri Dec 18 2015 Vasiliy N. Glazov <vascom2@gmail.com> 1.7.2-1
 - Update to 1.7.2
 
