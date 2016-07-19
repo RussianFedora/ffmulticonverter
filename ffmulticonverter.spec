@@ -11,6 +11,7 @@ BuildArch:  noarch
 
 BuildRequires:  pkgconfig(python3)
 BuildRequires:  python3-setuptools
+BuildRequires:  desktop-file-utils
 
 Requires:   python-qt5
 Requires:   ImageMagick
