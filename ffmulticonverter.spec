@@ -1,6 +1,6 @@
 Name:       ffmulticonverter
-Version:    1.7.2
-Release:    2%{?dist}
+Version:    1.8.0
+Release:    1%{?dist}
 Summary:    GUI File Format Converter
 
 License:    GPLv3
@@ -59,6 +59,9 @@ chmod 755 %{buildroot}%{python3_sitelib}/%{name}/preferences_dlg.py
 %{_mandir}/man1/%{name}.1.gz
 
 %changelog
+* Tue Jul 19 2016 Vasiliy N. Glazov <vascom2@gmail.com> 1.8.0-1
+- Update to 1.8.0
+
 * Thu Jun 16 2016 Vasiliy N. Glazov <vascom2@gmail.com> 1.7.2-2
 - Correct files handling
 - Use pkgconfig in BR
