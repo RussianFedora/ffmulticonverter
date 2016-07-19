@@ -32,19 +32,22 @@ Features:
  - Recursive conversions
 
 %prep
-%setup -q -n %{name}-%version
+%autosetup
 
 
 %build
-%{__python3} setup.py build
+%py3_build
 
 %install
-%{__python3} ./setup.py install -O1 --root=%{buildroot}
+%py3_install
 chmod 755 %{buildroot}%{python3_sitelib}/%{name}/%{name}.py
 chmod 755 %{buildroot}%{python3_sitelib}/%{name}/about_dlg.py
 chmod 755 %{buildroot}%{python3_sitelib}/%{name}/presets_dlgs.py
 chmod 755 %{buildroot}%{python3_sitelib}/%{name}/progress.py
 chmod 755 %{buildroot}%{python3_sitelib}/%{name}/preferences_dlg.py
+
+%check
+desktop-file-validate %{_datadir}/applications/%{name}.desktop
 
 
 %files
