@@ -12,7 +12,7 @@ BuildArch:  noarch
 BuildRequires:  pkgconfig(python3)
 BuildRequires:  python3-setuptools
 
-Requires:   python3-PyQt4
+Requires:   python-qt5
 Requires:   ImageMagick
 Requires:   unoconv
 Requires:   ffmpeg
