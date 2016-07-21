@@ -44,7 +44,7 @@ Features:
 
 
 %check
-desktop-file-validate %{_datadir}/applications/%{name}.desktop
+desktop-file-validate %{buildroot}%{_datadir}/applications/%{name}.desktop
 
 
 %files
