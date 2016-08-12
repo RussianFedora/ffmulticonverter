@@ -56,7 +56,7 @@ desktop-file-validate %{buildroot}%{_datadir}/applications/%{name}.desktop
 %{_datadir}/applications/*.desktop
 %{_datadir}/%{name}/presets.xml
 %{_datadir}/pixmaps/%{name}.png
-%{_mandir}/man1/%{name}.1.gz
+%{_mandir}/man1/%{name}.1.*
 
 %changelog
 * Tue Jul 19 2016 Vasiliy N. Glazov <vascom2@gmail.com> 1.8.0-1
