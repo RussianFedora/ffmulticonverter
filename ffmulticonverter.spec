@@ -3,7 +3,7 @@ Version:    1.8.0
 Release:    2%{?dist}
 Summary:    GUI File Format Converter
 
-License:    GPLv3
+License:    GPLv3+
 URL:        https://sites.google.com/site/ffmulticonverter/home
 Source0:    http://sourceforge.net/projects/ffmulticonv/files/%{name}-%{version}.tar.gz
 
@@ -13,7 +13,7 @@ BuildRequires:  pkgconfig(python3)
 BuildRequires:  python3-setuptools
 BuildRequires:  desktop-file-utils
 
-Requires:   python-qt5
+Requires:   python3-qt5
 Requires:   ImageMagick
 Requires:   unoconv
 Requires:   ffmpeg
@@ -54,7 +54,7 @@ desktop-file-validate %{buildroot}%{_datadir}/applications/%{name}.desktop
 %{python3_sitelib}/%{name}-%version-py%{python3_version}.egg-info
 %{python3_sitelib}/%{name}
 %{_datadir}/applications/*.desktop
-%{_datadir}/%{name}/presets.xml
+%{_datadir}/%{name}
 %{_datadir}/pixmaps/%{name}.png
 %{_mandir}/man1/%{name}.1.*
 
